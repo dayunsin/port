@@ -1,723 +1,636 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ooo포트폴리오</title>
-    <link
-    rel="stylesheet"
-    href="https://unpkg.com/swiper/swiper-bundle.min.css"
-  />
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" 
-    integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="css/main.css" rel="stylesheet" />
-</head>
-<body>
-    <header>
-        <div>
-            <h1>
-                <a href="#">SINDAYUN</a>
-            </h1>
-            <p>
-                <a href="#">RESUME</a>
-            </p>
-        </div>
-    </header>
-    <div class="main_visual">
-        <div>
-            <video muted autoplay loop> 
-                <source src="images/fashion.mp4" type="video/mp4" />
-            </video>
-        </div>
-        <p>video editing / motion graphice portfolio</p>
-    </div><!-- .main_visual end -->
+@charset "utf-8";
 
-    <section class="profile">
-        <div class="photo">
-            <figure><img src="images/img02.jpg" alt="oo얼굴" /></figure> 
-        </div>
-        <div class="about">
-            <div>
-                <dl>
-                    <dt>신다윤</dt>
-                    <dd>010-1234-5678</dd>
-                    <dd>98.09.99</dd>
-                </dl>
-                <dl>
-                    <dt>EDUCATION</dt>
-                    <dd>부산 그린컴퓨터아카데미<br />
-                    [멀티미디어콘텐츠제작]영상편집<br />(모션그래픽, 프리미어프로, 에프터이펙트)과정 수료</dd>
-                    <dd>oo 대학교 전공 졸업</dd>
-                    <dd>oo 고등학교 졸업</dd>
-                </dl>
-                <dl>
-                    <dt>LICENSE</dt>
-                    <dd>자경증 리스트 작성</dd>
-                </dl>
-                <dl>
-                    <dt>SKILLS</dt>
-                    <dd>html, css, js</dd>
-                    <dd>포토샵</dd>
-                    <dd>일러스트</dd>
-                    <dd>프리미어프로</dd>
-                    <dd>애프터이펙트</dd>
-                </dl>
-            </div>
-        </div><!-- about end -->
-    </section><!-- profile end -->
+/* 초기값 */
+* {margin:0; padding:0;}
+li {list-style: none;}
+a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+html, body {
+    color: #333;
+}
 
-    <section class="motion">
-        <h3>모션그래픽디자인</h3>
-        <div class="motion_in">
-            <ul>
-                <li class="tit">오늘과 과거를 잇다</li>
-                <li class="att">연출, 촬영, 편집, 디자인, 특수효과 / 모방</li>
-            </ul>
-            <div class="info">
-                <video autoplay muted loop>
-                    <source src="images/tree.mp4" type="video/mp4" />
-                </video>
-                <div class="text">
-                    <strong>#영화 티저</strong>
-                    <h4>오늘과 과거를 잇다.</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad enim facilis quibusdam, perspiciatis, maxime totam nesciunt blanditiis assumenda necessitatibus aspernatur iure tempora voluptas reprehenderit? Quis ipsa debitis soluta delectus perferendis.</p>
-                    <dl>
-                        <dt>프로그램</dt>
-                        <dd>일러스트, 포토샵, 프리미어 프로, 애프터 이펙트</dd>
-                    </dl>
-                    <dl>
-                        <dt>러닝타임</dt>
-                        <dd>2m 15s</dd>
-                    </dl>
-                    <dl>
-                        <dt>URL주소</dt>
-                        <dd>https://www.youtube.com/watch?v=fHRcVwtlvZ8&t=1s&ab_channel=%EC%9D%B4%EB%8B%88%EC%8A%A4%ED%94%84%EB%A6%AC%28innisfree%29</dd>
-                    </dl>
-                    <ul class="btn">
-                        <li><a href="#">유튜브보기</a></li>
-                        <li><a href="#">기획서보기</a></li>
-                    </ul>
-                </div><!-- .text end -->
-            </div><!-- .info end -->
-            <div class="thum">
-                <ul>
-                    <li>
-                        <figure>
-                            <img src="images/flower.JPG" alt="안개꽃" />
-                        </figure>
-                        <p>#01 00:05:12</p>
-                    </li>
-                    <li>
-                        <figure>
-                            <img src="images/flower.JPG" alt="안개꽃" />
-                        </figure>
-                        <p>#01 00:05:12</p>
-                    </li>
-                    <li>
-                        <figure>
-                            <img src="images/flower.JPG" alt="안개꽃" />
-                        </figure>
-                        <p>#01 00:05:12</p>
-                    </li>
-                    <li>
-                        <figure>
-                            <img src="images/flower.JPG" alt="안개꽃" />
-                        </figure>
-                        <p>#01 00:05:12</p>
-                    </li>
-                    <li>
-                        <figure>
-                            <img src="images/flower.JPG" alt="안개꽃" />
-                        </figure>
-                        <p>#01 00:05:12</p>
-                    </li>
-                </ul>
-            </div><!-- .htum end -->
-        </div><!-- .motion_in end / 1 -->
+/******** header */
+header {
+    height: 80px;
+    line-height: 80px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+header a {
+    color: #fff;
+}
+header div {
+    max-width: 1600px;
+    width: calc(100% - 30px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+header div h1 {
+    font-size: 20px;
+}
 
-        <div class="motion_in">
-            <ul>
-                <li class="tit">오늘과 과거를 잇다</li>
-                <li class="att">연출, 촬영, 편집, 디자인, 특수효과 / 모방</li>
-            </ul>
-            <div class="info">
-                <div class="text">
-                    <strong>#영화 티저</strong>
-                    <h4>오늘과 과거를 잇다.</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad enim facilis quibusdam, perspiciatis, maxime totam nesciunt blanditiis assumenda necessitatibus aspernatur iure tempora voluptas reprehenderit? Quis ipsa debitis soluta delectus perferendis.</p>
-                    <dl>
-                        <dt>프로그램</dt>
-                        <dd>일러스트, 포토샵, 프리미어 프로, 애프터 이펙트</dd>
-                    </dl>
-                    <dl>
-                        <dt>러닝타임</dt>
-                        <dd>2m 15s</dd>
-                    </dl>
-                    <dl>
-                        <dt>URL주소</dt>
-                        <dd>https://www.youtube.com/watch?v=fHRcVwtlvZ8&t=1s&ab_channel=%EC%9D%B4%EB%8B%88%EC%8A%A4%ED%94%84%EB%A6%AC%28innisfree%29</dd>
-                    </dl>
-                    <ul class="btn">
-                        <li><a href="#">유튜브보기</a></li>
-                        <li><a href="#">기획서보기</a></li>
-                    </ul>
-                </div><!-- .text end -->
+/* 메인비주얼 영상 */
+.main_visual {
+    background-color: #ab7781;
+    padding: 100px 0 150px;
+}
+.main_visual div {
+    /* width: 1500px;
+    height: 900px; */
+    overflow: hidden;
+    /* 벗어나는 요소들 숨김처리 */
+    /* border-radius: 250px 250px 0 0; */
+    margin: 0 auto;
+}
+.main_visual div video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main_visual p {
+    text-align: center;
+    color: #fff;
+    margin-top: 30px;
+    font-size: 22px;
+    letter-spacing: 3px; 
+    /* 글자 좌우 간격 */
+}
 
-                <video autoplay muted loop>
-                    <source src="images/tree.mp4" type="video/mp4" />
-                </video>
-            </div><!-- .info end -->
-            <div class="thum">
-                <ul>
-                    <li>
-                        <figure>
-                            <img src="images/flower.JPG" alt="안개꽃" />
-                        </figure>
-                        <p>#01 00:05:12</p>
-                    </li>
-                    <li>
-                        <figure>
-                            <img src="images/flower.JPG" alt="안개꽃" />
-                        </figure>
-                        <p>#01 00:05:12</p>
-                    </li>
-                    <li>
-                        <figure>
-                            <img src="images/flower.JPG" alt="안개꽃" />
-                        </figure>
-                        <p>#01 00:05:12</p>
-                    </li>
-                    <li>
-                        <figure>
-                            <img src="images/flower.JPG" alt="안개꽃" />
-                        </figure>
-                        <p>#01 00:05:12</p>
-                    </li>
-                    <li>
-                        <figure>
-                            <img src="images/flower.JPG" alt="안개꽃" />
-                        </figure>
-                        <p>#01 00:05:12</p>
-                    </li>
-                </ul>
-            </div><!-- .htum end -->
-        </div><!-- .motion_in end / 2 -->
-    </section><!-- .motion end -->
+/* 프로파일 ********/
+/*********** 개인정보 */
+.profile {
+    max-width:1100px;
+    width: calc(100% - 30px);
+    margin: 150px auto;
+    display: flex; 
+    justify-content: space-between; 
+}
+.profile .photo {
+    width: 40%;
+    text-align: center;
+    font-size: 20px;
+}
+.profile figure {
+    border-radius: 170px;
+    overflow: hidden;
+}
+.profile figure img {
+    width: 100%;
+   
+    display: block;
+}
+.profile .photo p {
+    margin-top: 10px;
+}
+ 
+.profile .about {
+    width: 58%;
+    background-color: rgb(240, 240, 240);
+    height: 100%;
+    border-radius: 40px;
+    padding: 50px;
+    box-sizing: border-box;
+}
+.profile .about dl { 
+    /* text-align: right; */
+    font-size: 18px;
+}
+.profile .about dl dt {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.profile .about dl dd {
+    margin-bottom: 5px;
+}
 
-    <!-- 모션 슬라이드 -->
-    <section class="motion_slide">
-        <!-- Swiper -->
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <figure class="f1"></figure>
-            <div class="list">
-                <video autoplay muted loop>
-                    <source src="images/tree.mp4" type="video/mp4" />
-                </video>
-                <div class="info">
-                    <strong>#게임</strong>
-                    <h4>오늘과 과거를 잇다.</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic iure atque a numquam libero sequi eveniet voluptate fugit culpa ab perspiciatis tenetur, praesentium provident quaerat veniam impedit illum aliquam minus?</p>
-                    <dl>
-                        <dt>프로그램</dt>
-                        <dd>일러스트, 포토샵, 프리미어 프로, 애프터 이펙트</dd>
-                    </dl>
-                    <dl>
-                        <dt>러닝타임</dt>
-                        <dd>2m 15s</dd>
-                    </dl> 
-                    <ul class="btn">
-                        <li><a href="#">유튜브보기</a></li>
-                        <li><a href="#">기획서보기</a></li>
-                    </ul>
-                </div><!-- .info end -->
-            </div><!-- .list end -->
-          </div><!-- 1 -->
+/************ 모션그래픽디자인  */
 
-          <div class="swiper-slide">
-            <figure class="f2"></figure>
-            <div class="list">
-                <video autoplay muted loop>
-                    <source src="images/tree.mp4" type="video/mp4" />
-                </video>
-                <div class="info">
-                    <strong>#게임</strong>
-                    <h4>오늘과 과거를 잇다.</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic iure atque a numquam libero sequi eveniet voluptate fugit culpa ab perspiciatis tenetur, praesentium provident quaerat veniam impedit illum aliquam minus?</p>
-                    <dl>
-                        <dt>프로그램</dt>
-                        <dd>일러스트, 포토샵, 프리미어 프로, 애프터 이펙트</dd>
-                    </dl>
-                    <dl>
-                        <dt>러닝타임</dt>
-                        <dd>2m 15s</dd>
-                    </dl> 
-                    <ul class="btn">
-                        <li><a href="#">유튜브보기</a></li>
-                        <li><a href="#">기획서보기</a></li>
-                    </ul>
-                </div><!-- .info end -->
-            </div><!-- .list end -->
-          </div><!-- 2 -->
+.h3 { max-width: 1440px;
+    width: calc(100% - 30px);
+    margin: 150px auto;
+    color: #ab7781;
+}
 
-          <div class="swiper-slide">
-            <figure class="f3"></figure>
-            <div class="list">
-                <video autoplay muted loop>
-                    <source src="images/tree.mp4" type="video/mp4" />
-                </video>
-                <div class="info">
-                    <strong>#게임</strong>
-                    <h4>오늘과 과거를 잇다.</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic iure atque a numquam libero sequi eveniet voluptate fugit culpa ab perspiciatis tenetur, praesentium provident quaerat veniam impedit illum aliquam minus?</p>
-                    <dl>
-                        <dt>프로그램</dt>
-                        <dd>일러스트, 포토샵, 프리미어 프로, 애프터 이펙트</dd>
-                    </dl>
-                    <dl>
-                        <dt>러닝타임</dt>
-                        <dd>2m 15s</dd>
-                    </dl> 
-                    <ul class="btn">
-                        <li><a href="#">유튜브보기</a></li>
-                        <li><a href="#">기획서보기</a></li>
-                    </ul>
-                </div><!-- .info end -->
-            </div><!-- .list end -->
-          </div><!-- 3 -->
+.video {
+    max-width: 1440px;
+    width: calc(100% - 30px);
+    margin: 150px auto;
+    color: #ab7781;
+    padding: 150px 0;
+}
 
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-      </div>
-    </section><!-- .motion_slide end -->
+.video .video_box {
+    max-width: 1280px;
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
 
-    <!-- 유튜브 리스트 -->
-    <section class="youtube_list">
-        <h3>영상리스트</h3>
-        <div class="motion_cate">
-            <ul>
-                <li class="on"><a href="#">게임</a></li>
-                <li><a href="#">홍보영상</a></li>
-                <li><a href="#">인포그래픽</a></li>
-                <li><a href="#">뮤비 티저</a></li>
-                <li><a href="#">영화 티저</a></li>
-            </ul>
+}
+.video .video_box .info {
+    width: 35%;
+}
+.video .video_box .images {
+    width: 60%; 
+    display: flex; 
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.video .video_box .images figure {
+    width: 49%;
+    max-height: 240px;
+    height: 18vw;
+}
+.video .video_box .images figure:first-child {
+    margin-bottom: 20px;
+}
+.video .video_box .images figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.video .video_box .video_tag {
+    width: 100%;
+    height: 600px;
+    margin-top: 30px;
+    box-shadow: 12px 12px 40px rgba(0, 0, 0, 0.3);
+}
 
-        </div><!-- .motion_cate end -->
-        <div class="youtube_wrap"> 
-            <div class="youtube_cont">
-                <div class="swiper mySwiperyoutube">
-                    <div class="swiper-wrapper on">
-                      <div class="swiper-slide">
-                          <!-- 유튜브 정보 -->
-                          <div class="youtube">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/wnudr9qjrbA" 
-                            title="YouTube video player" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen></iframe>
-                          </div><!-- .youtube end -->
-                          <div class="info">
-                            <p>작업내용(각본 연출 촬영 편집 보정 특수효과)</p>
-                            <h4>지브리 스튜디오 공부할때, 일할때 듣는 노래모음</h4>
-                            <d1>
-                                <dt>프로그램</dt>
-                                <dd>포토샵,일러스트, 프리미어프로,애프터이펙트</dd>
-                            </d1>
-                            <dl>
-                                <dt>러닝타임</dt>
-                                <dd>15s</dd>
-                            </dl>
-                            <dl>
-                                <dt>URL주소</dt>
-                                <dd><a href="#">https://www.youtube.com/watch?v=wnudr9qjrbA</a></dd>
-                            </dl>
-                          </div><!-- .info end -->
-                    </div>
-                      <div class="swiper-slide">
-                          <!-- 유튜브 정보 -->
-                          <div class="youtube">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/wnudr9qjrbA" 
-                            title="YouTube video player" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen></iframe>
-                          </div><!-- .youtube end -->
-                          <div class="info">
-                            <p>작업내용(각본 연출 촬영 편집 보정 특수효과)</p>
-                            <h4>지브리 스튜디오 공부할때, 일할때 듣는 노래모음</h4>
-                            <d1>
-                                <dt>프로그램</dt>
-                                <dd>포토샵,일러스트, 프리미어프로,애프터이펙트</dd>
-                            </d1>
-                            <dl>
-                                <dt>러닝타임</dt>
-                                <dd>15s</dd>
-                            </dl>
-                            <dl>
-                                <dt>URL주소</dt>
-                                <dd><a href="#">https://www.youtube.com/watch?v=wnudr9qjrbA</a></dd>
-                            </dl>
-                          </div><!-- .info end -->
-                    </div>
-                      
-                    </div>
-                    <div class="swiper-pagination"></div>
-                  </div><!-- 1 -->
-                  
-                <div class="swiper mySwiperyoutube">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <!-- 유튜브 정보 -->
-                            <div class="youtube">
-                              <iframe width="560" height="315" src="https://www.youtube.com/embed/wnudr9qjrbA" 
-                              title="YouTube video player" 
-                              frameborder="0" 
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                              allowfullscreen></iframe>
-                            </div><!-- .youtube end -->
-                            <div class="info">
-                              <p>작업내용(각본 연출 촬영 편집 보정 특수효과)</p>
-                              <h4>지브리 스튜디오 공부할때, 일할때 듣는 노래모음</h4>
-                              <d1>
-                                  <dt>프로그램</dt>
-                                  <dd>포토샵,일러스트, 프리미어프로,애프터이펙트</dd>
-                              </d1>
-                              <dl>
-                                  <dt>러닝타임</dt>
-                                  <dd>15s</dd>
-                              </dl>
-                              <dl>
-                                  <dt>URL주소</dt>
-                                  <dd><a href="#">https://www.youtube.com/watch?v=wnudr9qjrbA</a></dd>
-                              </dl>
-                            </div><!-- .info end -->
-                      </div>
-                        <div class="swiper-slide">
-                            <!-- 유튜브 정보 -->
-                            <div class="youtube">
-                              <iframe width="560" height="315" src="https://www.youtube.com/embed/wnudr9qjrbA" 
-                              title="YouTube video player" 
-                              frameborder="0" 
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                              allowfullscreen></iframe>
-                            </div><!-- .youtube end -->
-                            <div class="info">
-                              <p>작업내용(각본 연출 촬영 편집 보정 특수효과)</p>
-                              <h4>지브리 스튜디오 공부할때, 일할때 듣는 노래모음</h4>
-                              <d1>
-                                  <dt>프로그램</dt>
-                                  <dd>포토샵,일러스트, 프리미어프로,애프터이펙트</dd>
-                              </d1>
-                              <dl>
-                                  <dt>러닝타임</dt>
-                                  <dd>15s</dd>
-                              </dl>
-                              <dl>
-                                  <dt>URL주소</dt>
-                                  <dd><a href="#">https://www.youtube.com/watch?v=wnudr9qjrbA</a></dd>
-                              </dl>
-                            </div><!-- .info end -->
-                      </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                  </div><!-- 2 -->
 
-                <div class="swiper mySwiperyoutube">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <!-- 유튜브 정보 -->
-                            <div class="youtube">
-                              <iframe width="560" height="315" src="https://www.youtube.com/embed/wnudr9qjrbA" 
-                              title="YouTube video player" 
-                              frameborder="0" 
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                              allowfullscreen></iframe>
-                            </div><!-- .youtube end -->
-                            <div class="info">
-                              <p>작업내용(각본 연출 촬영 편집 보정 특수효과)</p>
-                              <h4>지브리 스튜디오 공부할때, 일할때 듣는 노래모음</h4>
-                              <d1>
-                                  <dt>프로그램</dt>
-                                  <dd>포토샵,일러스트, 프리미어프로,애프터이펙트</dd>
-                              </d1>
-                              <dl>
-                                  <dt>러닝타임</dt>
-                                  <dd>15s</dd>
-                              </dl>
-                              <dl>
-                                  <dt>URL주소</dt>
-                                  <dd><a href="#">https://www.youtube.com/watch?v=wnudr9qjrbA</a></dd>
-                              </dl>
-                            </div><!-- .info end -->
-                      </div>
-                        <div class="swiper-slide">
-                            <!-- 유튜브 정보 -->
-                            <div class="youtube">
-                              <iframe width="560" height="315" src="https://www.youtube.com/embed/wnudr9qjrbA" 
-                              title="YouTube video player" 
-                              frameborder="0" 
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                              allowfullscreen></iframe>
-                            </div><!-- .youtube end -->
-                            <div class="info">
-                              <p>작업내용(각본 연출 촬영 편집 보정 특수효과)</p>
-                              <h4>지브리 스튜디오 공부할때, 일할때 듣는 노래모음</h4>
-                              <d1>
-                                  <dt>프로그램</dt>
-                                  <dd>포토샵,일러스트, 프리미어프로,애프터이펙트</dd>
-                              </d1>
-                              <dl>
-                                  <dt>러닝타임</dt>
-                                  <dd>15s</dd>
-                              </dl>
-                              <dl>
-                                  <dt>URL주소</dt>
-                                  <dd><a href="#">https://www.youtube.com/watch?v=wnudr9qjrbA</a></dd>
-                              </dl>
-                            </div><!-- .info end -->
-                      </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                  </div><!-- 3 -->
-                <div class="swiper mySwiperyoutube">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <!-- 유튜브 정보 -->
-                            <div class="youtube">
-                              <iframe width="560" height="315" src="https://www.youtube.com/embed/wnudr9qjrbA" 
-                              title="YouTube video player" 
-                              frameborder="0" 
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                              allowfullscreen></iframe>
-                            </div><!-- .youtube end -->
-                            <div class="info">
-                              <p>작업내용(각본 연출 촬영 편집 보정 특수효과)</p>
-                              <h4>지브리 스튜디오 공부할때, 일할때 듣는 노래모음</h4>
-                              <d1>
-                                  <dt>프로그램</dt>
-                                  <dd>포토샵,일러스트, 프리미어프로,애프터이펙트</dd>
-                              </d1>
-                              <dl>
-                                  <dt>러닝타임</dt>
-                                  <dd>15s</dd>
-                              </dl>
-                              <dl>
-                                  <dt>URL주소</dt>
-                                  <dd><a href="#">https://www.youtube.com/watch?v=wnudr9qjrbA</a></dd>
-                              </dl>
-                            </div><!-- .info end -->
-                      </div>
-                        <div class="swiper-slide">
-                            <!-- 유튜브 정보 -->
-                            <div class="youtube">
-                              <iframe width="560" height="315" src="https://www.youtube.com/embed/wnudr9qjrbA" 
-                              title="YouTube video player" 
-                              frameborder="0" 
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                              allowfullscreen></iframe>
-                            </div><!-- .youtube end -->
-                            <div class="info">
-                              <p>작업내용(각본 연출 촬영 편집 보정 특수효과)</p>
-                              <h4>지브리 스튜디오 공부할때, 일할때 듣는 노래모음</h4>
-                              <d1>
-                                  <dt>프로그램</dt>
-                                  <dd>포토샵,일러스트, 프리미어프로,애프터이펙트</dd>
-                              </d1>
-                              <dl>
-                                  <dt>러닝타임</dt>
-                                  <dd>15s</dd>
-                              </dl>
-                              <dl>
-                                  <dt>URL주소</dt>
-                                  <dd><a href="#">https://www.youtube.com/watch?v=wnudr9qjrbA</a></dd>
-                              </dl>
-                            </div><!-- .info end -->
-                      </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                  </div><!-- 4 -->
-                <div class="swiper mySwiperyoutube">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <!-- 유튜브 정보 -->
-                            <div class="youtube">
-                              <iframe width="560" height="315" src="https://www.youtube.com/embed/wnudr9qjrbA" 
-                              title="YouTube video player" 
-                              frameborder="0" 
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                              allowfullscreen></iframe>
-                            </div><!-- .youtube end -->
-                            <div class="info">
-                              <p>작업내용(각본 연출 촬영 편집 보정 특수효과)</p>
-                              <h4>지브리 스튜디오 공부할때, 일할때 듣는 노래모음</h4>
-                              <d1>
-                                  <dt>프로그램</dt>
-                                  <dd>포토샵,일러스트, 프리미어프로,애프터이펙트</dd>
-                              </d1>
-                              <dl>
-                                  <dt>러닝타임</dt>
-                                  <dd>15s</dd>
-                              </dl>
-                              <dl>
-                                  <dt>URL주소</dt>
-                                  <dd><a href="#">https://www.youtube.com/watch?v=wnudr9qjrbA</a></dd>
-                              </dl>
-                            </div><!-- .info end -->
-                      </div>
-                        <div class="swiper-slide">
-                            <!-- 유튜브 정보 -->
-                            <div class="youtube">
-                              <iframe width="560" height="315" src="https://www.youtube.com/embed/wnudr9qjrbA" 
-                              title="YouTube video player" 
-                              frameborder="0" 
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                              allowfullscreen></iframe>
-                            </div><!-- .youtube end -->
-                            <div class="info">
-                              <p>작업내용(각본 연출 촬영 편집 보정 특수효과)</p>
-                              <h4>지브리 스튜디오 공부할때, 일할때 듣는 노래모음</h4>
-                              <d1>
-                                  <dt>프로그램</dt>
-                                  <dd>포토샵,일러스트, 프리미어프로,애프터이펙트</dd>
-                              </d1>
-                              <dl>
-                                  <dt>러닝타임</dt>
-                                  <dd>15s</dd>
-                              </dl>
-                              <dl>
-                                  <dt>URL주소</dt>
-                                  <dd><a href="#">https://www.youtube.com/watch?v=wnudr9qjrbA</a></dd>
-                              </dl>
-                            </div><!-- .info end -->
-                      </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                  </div><!-- 5 -->
-            </div><!-- .youtube_cont end -->           
-        </div><!-- .youtube_wrap end -->
-    </section><!-- .youtube_list end -->
+/* BEST MEDIA 안에 있는 비디오 */
+.video .video_box .video_tag {
+    width: 100%;
+    height: auto;  
+}
+.video .video_box video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 12px 12px 40px rgba(0, 0, 0, 0.3);
     
-    <section class="g_design">
-        <h3>2D 디자인</h3>
-        <em>클릭하시면 큰 이미지를 보실 수 있습니다.</em>
-        <div class="img_list">
-            <div>
-                <a href="https://source.unsplash.com/eWFdaPRFjwE/1500x1000" data-fancybox="images">
-                    <img src="https://source.unsplash.com/eWFdaPRFjwE/240x160" />
-                    <ul>
-                        <li>포토샵,일러스트</li>
-                        <li>캐릭터 디자인</li>
-                    </ul>
-                  </a>
-            </div><!-- 1 -->  <div>
-                <a href="https://source.unsplash.com/eWFdaPRFjwE/1500x1000" data-fancybox="images">
-                    <img src="https://source.unsplash.com/eWFdaPRFjwE/240x160" />
-                    <ul>
-                        <li>포토샵,일러스트</li>
-                        <li>캐릭터 디자인</li>
-                    </ul>
-                  </a>
-            </div><!-- 2 -->  <div>
-                <a href="https://source.unsplash.com/eWFdaPRFjwE/1500x1000" data-fancybox="images">
-                    <img src="https://source.unsplash.com/eWFdaPRFjwE/240x160" />
-                    <ul>
-                        <li>포토샵,일러스트</li>
-                        <li>캐릭터 디자인</li>
-                    </ul>
-                  </a>
-            </div><!-- 3 -->  <div>
-                <a href="https://source.unsplash.com/eWFdaPRFjwE/1500x1000" data-fancybox="images">
-                    <img src="https://source.unsplash.com/eWFdaPRFjwE/240x160" />
-                    <ul>
-                        <li>포토샵,일러스트</li>
-                        <li>캐릭터 디자인</li>
-                    </ul>
-                  </a>
-            </div><!-- 4 -->
-        </div><!-- .img_list end -->
-    </section><!-- .g_design end -->
+} 
 
-    <footer>
-        <h3>Sin Da Yun</h3>
-        <ul>
-            <li><a href="tel:010-1234-5678">010 1234 5678</a>
-            </li>
-            <li>
-                <a href="#">dayundayun@naver.com</a>
-            </li>
-            <li>
-                <a href="#">유튜브 개인 주소</a>
-            </li>
-        </ul>
-        <p>COPYRIGHT 2022 SinDaYun. ALL RIGHTS RESERVED.<br />
-        본 사이트는 개인 포트폴리오 사이트로 제작되어 상업적 목적이 아닙니다.
-        사용된 일부 이미지 및 폰트 등은 별도의 출처가 있음을 밝혀 드립니다.</p>
-    </footer>
+/* BEST MEDIA 안에 있는 유튜브 */
+.video .video_box .video_tag > div {
+    width: 100%;
+    position: relative;
+    padding-top: 56.25%;
+}
+.video .video_box > div iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 12px 12px 40px rgba(0, 0, 0, 0.3);
+
+}
+ 
+.video .info .cate {
+    font-weight: bold;
+    font-size: 18px;
+}
+.video .info .text {
+    line-height: 1.4;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+.video .info dl {
+    display: flex;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    
+}
+.video .info dl dt {
+    width: 120px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.video .info dl dd {
+    width: 80%; 
+    font-size: 18px;
+}
+.btn {
+    display: flex;
+    margin-top: 30px;
+}
+.btn li {
+    margin-right: 10px;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    border: 1px solid #333;
+}
+.btn li a {
+    padding: 0 23px; 
+}
+.btn li:first-child {
+    background-color: #333;
+}
+.btn li:first-child a {
+    color: #fff;
+}
+
+.v2 {
+    background-color: rgba(241, 241, 241, 0.603);
+}
 
 
-    <!-- jquery lib -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" 
-    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+/* 모션슬라이드 스와이퍼 스타일 */
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
 
-    <!-- fancybox3 js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" 
-    integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
 
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
+    /* Center slide text vertically */
+    /* display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex; */
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
 
-      $(function(){
-          //스크립트 코드
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-          //해상도 크기 767px이하일 때 부터
-          //슬라이드 적용
-          $(window).resize(function(){
-              if($(window).width() < 960) {
-                  //스와이퍼 스크립트 코드
-                   var swiper = new Swiper(".mySwiperyoutube", {
-                    slidesPerView: 1.2,
-                    spaceBetween: 15,
-                    pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                    },
-                });
-              } //if
-          }); //resize
 
-          //탭메뉴
-          $('.motion_cate ul li').click(function(){
-              $('.motion_cate ul li').removeClass('on');
-              $(this).addClass('on');
 
-              //메뉴를 클릭하면 컨텐츠 유/무 
-              $('.mySwiperyoutube .swiper-wrapper').removeClass('on');
-              $('.mySwiperyoutube .swiper-wrapper').eq($(this).index()).addClass('on');
+/* 영상리스트 youtube list */
+.youtube_list h3 {
+    text-align: center;
+}
+.youtube_list .motion_cate ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+.youtube_list .motion_cate ul li {
+    height: 45px;
+    line-height: 45px;
+    padding: 0 30px;
+    border: 1px solid #ccc;
+    margin: 5px;
+}
+.youtube_list .motion_cate ul li.on {
+    background-color: #333;
+    box-shadow: 2px 3px 20px rgba(0, 0, 0, .3);
+    border: 1px solid #333;
+}
+.youtube_list .motion_cate ul li.on A {
+    color: #fff;
+}
+.mySwiperyoutube .swiper-wrapper {display: none;}
+.mySwiperyoutube .swiper-wrapper.on {
+    display: flex;
+    flex-wrap: wrap;
+}
 
-          });//탭메뉴
+/* 유튜브리스트 컨텐츠 */
+.youtube_list .youtube_wrap .youtube_cont {
+    max-width: 1280px;
+    width: calc(100% - 30px);
+    margin: 0 auto;
+}
+.youtube_list .youtube_wrap .swiper-slide {
+    width: 49%;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin: 0 0.5%;
+    margin-bottom: 20px;
+}
+.youtube_list .swiper-slide .youtube {
+    position: relative;
+    padding-bottom: 56.25%;
+    width: 100%;
+}
+.youtube_list .swiper-slide .youtube iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.youtube_list .swiper-slide .info {
+    padding: 25px;
+    text-align: left;
+}
+.youtube_list .swiper-slide .info p {
+    font-size: 14px;
+}
+.youtube_list .swiper-slide .info h4 {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.youtube_list .swiper-slide .info dl {
+    display: flex;
+    margin-top: 10px;
+}
+.youtube_list .swiper-slide .info dl dt {
+    width: 30%;
+    font-weight: bold;
+}
+.youtube_list .swiper-slide .info dl dd {
+    width: 70%;
+    word-break: break-all;
+}
 
-          $('.motion_cate li a').click(function(e){
-              e.preventDefault();
-          });
+ 
+/*************************************** 그래픽 디자인 2D VISUAL DESIGN */
+.g_design {
+    max-width: 1280px;
+    width: calc(100% - 20px);
+    margin: 150px auto;
+    margin-top: 250px;
 
-      });//jquery end
-    </script>
+}
+.g_design h3 {
+    width: auto;
+    text-align: center;
+}
+.imglist {
+    display: flex;
+    justify-content: space-between;
+}
 
-</body>
-</html>
+.imglist div {
+    width: 24%;
+    height: 20vw;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+   
+}
+.imglist div a {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: 0.5s;
+    overflow: hidden;
+     
+}
+
+.imglist div a::before {
+    content:'';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 2;
+
+    display: none;
+}
+
+.imglist div ul {
+    /* padding: 15px; */
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+    z-index: 9;
+
+    display: none;
+    
+}
+.imglist div ul li:first-child {
+    font-size: 14px;
+    margin-bottom: 10px;
+} 
+.imglist div ul li:last-child {
+    font-weight: bold;
+}
+
+.imglist div a figure {
+    width: 100%;
+    height: 100%;
+}
+.imglist div a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.8s;
+
+}
+
+/* **************************************************
+*****************이미지에 마우스 올렷을 때 효과 
+*******************************************************/
+
+.imglist div a:hover::before {
+    display: block;
+}
+.imglist div a:hover ul {
+    display: block;
+}
+.imglist div a:hover img {
+    transform: scale(1.2);
+}
+
+
+/******* 푸터 footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+footer a {
+    color: #fff;
+}
+footer h3 {
+    letter-spacing: 5px;
+}
+footer ul {
+    margin: 20px 0;
+}
+footer ul li {
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    margin: 10px auto;
+}
+footer p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+}
+/* 반응형 제작 ************************************
+**************************************************/
+
+@media screen and (max-width: 1024px) {
+    
+    /* 모션그래픽디자인 슬라이드 */
+    .motion_slide .swiper-slide figure {
+        height: 35vw;
+    }
+    .motion_slide .swiper-slide .list {
+        margin-top: -24%;
+    }
+    .motion_slide .swiper-slide .list .info {
+        margin-top: 1%;
+    }
+
+    /* 버튼들 */
+    .btn {margin-top: 30px;}
+}
+
+
+@media screen and (max-width: 960px) {
+    /* 모션그래픽디자인 상단 */
+    .motion .info {flex-wrap: wrap;}
+    .motion .info video {
+        width: 100%;
+    }
+    .motion .info .text {
+        width: 95%;
+        margin: 20px auto;
+    }
+    .motion .flex_bottom ul li {width: 24%;}
+    .motion .flex_bottom ul li:last-child {display: none;}
+    .motion .flex_bottom ul li figure {height: 180px;}
+
+    .motion .motion_in:nth-of-type(2) .info video { order: -1;}
+
+    /* 모션그래픽디자인 슬라이드 */
+    .motion_slide .swiper-slide .list video {
+        width: 100%;
+    }
+    .motion_slide .swiper-slide .list .info {
+        width: 95%;
+        margin: 20px auto;
+    }
+    .motion_slide .swiper-slide .list {
+        width: 90%; 
+    }
+    .motion_slide {margin: 70px auto;}
+
+
+    /* 유튜브 리스트 */
+    .youtube_list {margin: 0 auto;}
+
+    /* 그래픽디자인 */
+    .g_design {margin-top: 70px;} 
+}
+
+
+@media screen and (max-width: 640px) {
+    :root  {--swiper-navigation-size: 24px;}
+
+    h3 {font-size: 30px;}
+    h4 {font-size: 24px;}
+    .tit {display: none;}
+
+    /* 메인비주얼 */
+    .main_visual div {
+        width: 70%;
+        height: 60vh;
+    }
+
+    /* 자기소개서 */
+    .profile {flex-wrap: wrap;}
+    .profile .photo {width: 100%;}
+    .profile figure {margin: 0 auto; width: 300px; height: 300px; border-radius: 50%; margin-bottom: 30px;}
+    .profile figure img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .profile .about {width: 100%;}
+
+    /* 모션그래픽디자인 */
+    .motion {margin: 80px auto;} 
+    .motion .motion_in {margin-bottom: 80px;}
+    .motion .motion_in > ul {flex-wrap: wrap;}
+
+    .motion .info .info h4 {margin-bottom: 10px;}
+    .motion .info .info p {margin-bottom: 30px;}
+
+    .motion .thum {display: none;}
+    .motion .thum ul li:nth-child(4) {display: none;}
+    .motion .thum ul li {width: 32%;}
+    .motion .thum ul li figure {height: 120px;}
+    
+    /* 모션그래픽디자인 슬라이드 */
+    .motion_slide {margin: 70px auto;}
+    .motion_slide .swiper-slide .info h4 {font-size: 24px; margin-bottom: 10px;}
+ 
+
+    /* 유튜브리스트 */ 
+    .youtube_list {padding:0;}
+    .youtube_list .swiper-slide .info {padding: 15px;}
+    .youtube_list .swiper-slide .info dl {font-size: 16px;}
+    /* 리스트 슬라이드 */
+    .mySwiperyoutube .swiper-wrapper.on {
+        flex-wrap: nowrap;
+    }
+    .mySwiperyoutube .swiper-wrapper.on .swiper-slide {
+        width: 420px;
+    } 
+    .mySwiperyoutube .swiper-wrapper > div {margin: 0; }
+    
+
+    /* 그래픽디자인 */
+    .g_design {margin: 70px auto;}
+    .g_design .img_list {flex-wrap: wrap;}
+    .g_design .img_list div {width: 49%; margin: 10px 0;}
+    
+}
+
+
+@media screen and (max-width: 400px) {
+    
+    .motion .info .text dl dt {width: 30%;}
+    .motion .info .text dl dd {width: 65%;}
+    .motion .thum {margin-top: 10px;}
+
+ 
+    .motion_slide .list .info dl dt {width: 30%;}
+    .motion_slide .list .info dl dd {width: 65%;}
+
+
+    /* 유튜브리스트 */
+    .youtube_list h3 {font-size: 25px;}
+    
+    .youtube_list .swiper-slide .info dl {flex-wrap: wrap;}
+    .youtube_list .swiper-slide .info dl dt {width: 100%;}
+    .youtube_list .swiper-slide .info dl dd {width: 100%;}
+
+    /* 그래픽디자인 */ 
+    .img_list a ul {padding: 10px;}
+    .img_list a ul li:nth-child(2) {font-size: 17px;}
+    
+}
